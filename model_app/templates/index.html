@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+<body>
+    <h2>Create Student</h2>
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        {{ form.FirstName.label_tag }} {{ form.FirstName }}
+        {{ form.LastName.label_tag }} {{ form.LastName }}
+        {{ form.emailaddress.label_tag }} {{ form.emailaddress }}
+        {{ form.date_of_birth.label_tag }} {{ form.date_of_birth }}
+        {{ form.age.label_tag }} {{ form.age }}
+        <button type="submit">Submit</button>
+    </form>
+    
+    
+</body>
+</html>
